@@ -33,6 +33,7 @@ export function Hero(props: {
   primary: NavItem;
   secondary?: NavItem;
   theme?: ThemeName;
+  highlights?: Array<{ title: string; text: string }>;
 }): JSX.Element;
 
 export function PageHeader(props: {
@@ -52,6 +53,24 @@ export function Section(props: {
 export function CardGrid(props: {
   items: Array<string | { title: string; text: string }>;
   columns?: 2 | 3;
+}): JSX.Element;
+
+export function FeatureBand(props: {
+  eyebrow?: string;
+  title: string;
+  text: string;
+  theme?: ThemeName;
+  items?: Array<{ kicker?: string; title: string; text: string }>;
+}): JSX.Element;
+
+export function ProcessSteps(props: {
+  steps: Array<{ title: string; text: string }>;
+}): JSX.Element;
+
+export function StatementPanel(props: {
+  title: string;
+  text: string;
+  theme?: ThemeName;
 }): JSX.Element;
 
 export function TextBlock(props: { children: ReactNode }): JSX.Element;
